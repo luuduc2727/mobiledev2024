@@ -7,6 +7,9 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -58,13 +61,27 @@ public class ForecastFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Create a new View or inflate a layout
-        View view = new View(getActivity());
+        // Create a root LinearLayout
+        LinearLayout rootLayout = new LinearLayout(getContext());
+        rootLayout.setOrientation(LinearLayout.VERTICAL); // Set orientation to vertical
+  
 
-        // Set background color (Choose one color)
-        int[] colors = {0x20FF0000, 0x2000FF00, 0x200000FF}; // Red, Green, Blue
-        view.setBackgroundColor(colors[0]); // Change the index to switch colors
 
-        return view;
+
+        TextView dayTextView = new TextView(getContext());
+        dayTextView.setText("Thursday");
+
+
+
+        ImageView weatherIcon = new ImageView(getContext());
+        weatherIcon.setImageResource(R.drawable.weather_247);
+
+
+        // Add TextView and ImageView to the LinearLayout
+        rootLayout.addView(dayTextView);
+        rootLayout.addView(weatherIcon);
+
+        // Return the root layout as the fragment's view
+        return rootLayout;
     }
 }
