@@ -17,11 +17,11 @@ public class WeatherActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weather);
         Log.i("WeatherActivity ","app is created");
-        View main = findViewById(R.id.main);
-        main.setBackgroundColor(0xFF0000);
+        View main = findViewById(R.id.weatherFragment);
+
         ForecastFragment forecastFragment = new ForecastFragment();
         getSupportFragmentManager().beginTransaction().add(
-                R.id.container, forecastFragment).commit();
+                R.id.forecastFragment, forecastFragment).commit();
 
     };
     @Override
