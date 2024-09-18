@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">USTH Thời tiết</string>
+    <string name="Hanoi">Hà Nội</string>
+    <string name="Danang">Đà Nẵng</string>
+    <string name="HaiPhong">Hải Phòng</string>
+    <string name="Mon">Thứ hai</string>
+    <string name="Tue">Thứ ba</string>
+    <string name="Wed">thứ tư</string>
+    <string name="Thu">Thứ năm</string>
+    <string name="Fri">Thứ sáu</string>
+    <string name="Sat">Thứ bảy</string>
+    <string name="Sun">Chủ nhật</string>
+</resources>
